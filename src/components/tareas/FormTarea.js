@@ -66,8 +66,7 @@ const FormTarea = () => {
     // Si es ediccion o nueva tarea
     if (tareaseleccionada === null) {
       // Agegar la nueva tarea al state de tareas
-      tarea.proyectoId = proyectoActual.id;
-      tarea.estado = false;
+      tarea.proyecto = proyectoActual._id;
       agregarTarea(tarea);
     } else {
       // Actualizar tarea existente

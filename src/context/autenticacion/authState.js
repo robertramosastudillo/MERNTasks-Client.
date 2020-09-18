@@ -26,7 +26,6 @@ const AuthState = (props) => {
   const registrarUsuario = async (datos) => {
     try {
       const respuesta = await clienteAxios.post("/api/usuarios", datos);
-      console.log(respuesta.data);
 
       dispatch({
         type: REGISTRO_EXITOSO,
@@ -36,7 +35,6 @@ const AuthState = (props) => {
       // Obtener el usuario
       usuarioAutenticado();
     } catch (error) {
-      // console.log(error.response.data.msg);
 
       const alerta = {
         msg: error.response.data.msg,

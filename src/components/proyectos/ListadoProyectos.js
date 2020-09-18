@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react";
-import Proyectos from "./Proyectos";
 import Proyecto from "./Proyecto";
 import proyectoContext from "../../context/proyectos/ProyectoContext";
 import AlertaContext from "../../context/alertas/alertaContext";
@@ -20,6 +19,7 @@ const ListadoProyectos = () => {
       mostrarAlerta(mensaje.msg, mensaje.categoria);
     }
     obtenerProyectos();
+    // eslint-disable-next-line
   }, [mensaje]);
 
   // Revisar si proyectos tiene contenido
